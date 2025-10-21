@@ -5,7 +5,8 @@ document,addEventListener('DOMContentLoaded', function() {
 
 function darkMode(){
 
-    const prefiereDarkMode = window.matchMedia('prefers-color-scheme: dark');
+    /**
+     * const prefiereDarkMode = window.matchMedia('prefers-color-scheme: dark');
     
     if(prefiereDarkMode.matches){
         document.body.classList.add('dark-mode');
@@ -16,6 +17,7 @@ function darkMode(){
     prefiereDarkMode = addEventListener('change', function() {
         document.body.classList.toggle('dark-mode');
     });
+    **/
 
     
     const botonDarkmode = document.querySelector('.dark-mode-boton');
