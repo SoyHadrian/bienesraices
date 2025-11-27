@@ -93,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($errores)) {
 
         // Crear carpeta
-        $carpetaImagenes = '../../imagenes';
+        $carpetaImagenes = '../../imagenes/';
 
         if (!is_dir($carpetaImagenes)) {
             mkdir($carpetaImagenes);
@@ -112,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $nombreImagen = md5(uniqid(rand(), true)) . ".jpg";
 
             // Subir la imagen
-            move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . "/" . $nombreImagen);
+            move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . $nombreImagen);
         } else {
             $nombreImagen = $propiedad['imagen'];
         }
